@@ -1,7 +1,22 @@
+import bcrypt from "bcryptjs";
 export default {
+  users: [
+    {
+      name: "Grace",
+      email: "gracelam@berkeley.edu",
+      password: bcrypt.hashSync("1234", 8),
+      admin: true,
+    },
+
+    {
+      name: "John",
+      email: "john@test.edu",
+      password: bcrypt.hashSync("1234", 8),
+      admin: false,
+    },
+  ],
   products: [
     {
-      _id: "1",
       name: "White Shirt",
       category: "Shirts",
       image: "/images/whiteshirt.jpg",
@@ -12,7 +27,6 @@ export default {
       countInStock: 10,
     },
     {
-      _id: "2",
       name: "Oversized Sweater",
       category: "Sweaters",
       image: "/images/whitesweater.jpg",
@@ -23,7 +37,6 @@ export default {
       countInStock: 50,
     },
     {
-      _id: "3",
       name: "Leggings",
       category: "Athletic",
       image: "/images/pants.jpg",
@@ -35,7 +48,6 @@ export default {
     },
 
     {
-      _id: "4",
       name: "Suede Coat",
       category: "Coat",
       image: "/images/coat.jpg",
