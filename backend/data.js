@@ -5,14 +5,14 @@ export default {
       name: "Grace",
       email: "gracelam@berkeley.edu",
       password: bcrypt.hashSync("1234", 8),
-      admin: true,
+      isAdmin: true,
     },
 
     {
       name: "John",
       email: "john@test.edu",
       password: bcrypt.hashSync("1234", 8),
-      admin: false,
+      isAdmin: false,
     },
   ],
   products: [
